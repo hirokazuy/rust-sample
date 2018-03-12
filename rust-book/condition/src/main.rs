@@ -6,4 +6,11 @@ fn main() {
     } else {
         println!("condition was false.");
     }
+
+    let number2 = if number < 5 {
+        0
+    } else {
+        10
+    };
+    println!("The value of number2 {}", number2);
 }
