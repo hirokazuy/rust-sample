@@ -17,8 +17,7 @@ fn main() {
     let user2 = User {
         email: String::from("test2@example.com"),
         username: String::from("test user2"),
-        sign_in_count: user1.sign_in_count,
-        active: false
+        ..user1
     };
 }
 
