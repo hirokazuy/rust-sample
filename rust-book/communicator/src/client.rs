@@ -1,4 +1,2 @@
-mod client {
-    fn connect() {
-    }
+fn connect() {
 }
