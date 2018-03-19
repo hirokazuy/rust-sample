@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::ErrorKind;
 
-fn main() {
+fn test1() {
     let f = File::open("hello.txt");
 
     let f = match f {
@@ -24,4 +24,18 @@ fn main() {
             )
         }
     };
+}
+
+fn test2() {
+    let f = File::open("hello.txt").unwrap();
+}
+
+fn test3() {
+    let f = File::open("hello.txt").expect("Failed to open hello.txt");
+}
+
+fn main() {
+//    test1();
+//    test2();
+    test3();
 }
