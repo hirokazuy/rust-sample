@@ -10,6 +10,12 @@ impl<T> Point<T> {
     }
 }
 
+impl Point<f32> {
+    fn distance_from_original(&self) -> f32 {
+        (self.x.powi(2) + self.y.powi(2)).sqrt()
+    }
+}
+
 struct Point2<T, U> {
     x: T,
     y: U,
