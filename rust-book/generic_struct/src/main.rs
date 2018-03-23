@@ -4,6 +4,12 @@ struct Point<T> {
     y: T,
 }
 
+impl<T> Point<T> {
+    fn x(&self) -> &T {
+        &self.x
+    }
+}
+
 struct Point2<T, U> {
     x: T,
     y: U,
