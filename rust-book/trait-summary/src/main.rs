@@ -8,6 +8,9 @@ struct WeatherForecast {
 }
 
 impl Summarizable for WeatherForecast {
+    fn author_summary(&self) -> String {
+        String::from("")
+    }
     fn summary(&self) -> String {
         format!("The high will be {}, and the low will be {}. The chance of precipitaion is {}%.",
                 self.high_temp, self.low_temp, self.chance_of_precipitation)
