@@ -1,0 +1,6 @@
+[package]
+name = "trait-summary"
+version = "0.1.0"
+authors = ["Hien Ayatuki <hien.ayatuki@gmail.com>"]
+
+[dependencies]
