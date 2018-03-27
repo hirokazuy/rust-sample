@@ -1,5 +1,5 @@
 extern crate trait_summary;
-use trait_summary::{Tweet, Summarizable, NewsArticle};
+use trait_summary::{Tweet, Summarizable, NewsArticle, notify};
 
 struct WeatherForecast {
     high_temp: f64,
@@ -26,6 +26,7 @@ fn main() {
     };
 
     println!("1 new tweet: {}", tweet.summary());
+    notify(tweet);
 
     let wf = WeatherForecast {
         high_temp: 20.0,
@@ -33,6 +34,7 @@ fn main() {
         chance_of_precipitation: 30.0,
     };
     println!("1 new weather forecast: {}", wf.summary());
+    notify(wf);
 
     let article = NewsArticle {
         headline: String::from("Penguines win the Stanley Cup Championship!"),
@@ -42,4 +44,5 @@ fn main() {
     };
 
     println!("New article available! {}", article.summary());
+    notify(article);
 }
