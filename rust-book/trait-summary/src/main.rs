@@ -1,5 +1,5 @@
 extern crate trait_summary;
-use trait_summary::{Tweet, Summarizable};
+use trait_summary::{Tweet, Summarizable, NewsArticle};
 
 struct WeatherForecast {
     high_temp: f64,
@@ -30,4 +30,13 @@ fn main() {
         chance_of_precipitation: 30.0,
     };
     println!("1 new weather forecast: {}", wf.summary());
+
+    let article = NewsArticle {
+        headline: String::from("Penguines win the Stanley Cup Championship!"),
+        location: String::from("Pittsburgh, PA, USA"),
+        author: String::from("Iceburgh"),
+        content: String::from("The Pittsburgh Penguins once again are the best hocky team in the NHL."),
+    };
+
+    println!("New article available! {}", article.summary());
 }

@@ -7,7 +7,9 @@ mod tests {
 }
 
 pub trait Summarizable {
-    fn summary(&self) -> String;
+    fn summary(&self) -> String {
+        String::from("(Read more...)")
+    }
 }
 
 pub struct NewsArticle {
@@ -17,11 +19,7 @@ pub struct NewsArticle {
     pub content: String,
 }
 
-impl Summarizable for NewsArticle {
-    fn summary(&self) -> String {
-        format!("{}, by {} ({})", self.headline, self.author, self.location)
-    }
-}
+impl Summarizable for NewsArticle {}
 
 pub struct Tweet {
     pub username: String,
